@@ -8,8 +8,7 @@ export class HeaderComponent {
   collapsed = true;
   @Output() featureSelected = new EventEmitter<string>();
 
-  onSelectLink(feature: string, event: any) {
-    event.preventDefault();
+  onSelectLink(feature: string) {
     this.featureSelected.emit(feature);
   }
 }
